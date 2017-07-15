@@ -80,7 +80,7 @@ interface Lens
     
 ## Examples
 
-Having the following `Address` class:
+Having the following `Address` class, update the _street_ `Address`:
 
 ```php
 class Address
@@ -116,8 +116,6 @@ class Address
 
 Does not need setters. Internally uses a closure bind to the given object which get/set the properties.
 
-Update the _street_ `Address`:
-
 ```php
 $address    = new Address('123 Foo St', '20900');
 
@@ -130,9 +128,7 @@ $newAddress; // ('street' => '123 Bar St', 'postalCode' => '20900')
 
 #### Method strategy
 
-It uses methods given to get/set properties. 
-
-Update the _street_ `Address`:
+It uses method names given to get/set properties. 
 
 ```php
 $address        = new Address('123 Foo St', '20900');
@@ -146,8 +142,6 @@ $newAddress; // ('street' => '123 Foo St', 'postalCode' => '18210')
 #### Compose
 
 To update nested structures.
-
-Update the _street_ `Address` of a `Person:
 
 ```php
 class Person
