@@ -114,7 +114,7 @@ class Address
 
 #### Property strategy
 
-Does not need getters. Internally uses a closure bind to the given object which get/set the properties.
+Does not need setters. Internally uses a closure bind to the given object which get/set the properties.
 
 Update the _street_ `Address`:
 
