@@ -108,13 +108,13 @@ class Address
     {
         $this->postalCode = $postalCode;
     }
-    
 }
 ```
 
 #### Property strategy
 
-Does not need setters. Internally uses a closure bind to the given object which get/set the properties.
+Internally uses a closure bind to the given object which get/set the properties. So, the class to be updated not need setters.
+This strategy does not check the object or property is the type expected, then in the following example we could use `$streetLens` for whatever class that has a property `$street` 
 
 ```php
 $address    = new Address('123 Foo St', '20900');
@@ -129,6 +129,7 @@ $newAddress; // ('street' => '123 Bar St', 'postalCode' => '20900')
 #### Method strategy
 
 It uses method names given to get/set properties. 
+This strategy works for whatever class that implements these methods. The property type checking could be done explicitly by the setter method implemented in the class.  
 
 ```php
 $address        = new Address('123 Foo St', '20900');
