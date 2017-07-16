@@ -11,5 +11,8 @@
     "psr-4": {
       "Martinezdelariva\\Test\\": "test"
     }
+  },
+  "scripts" : {
+    "test" : "./vendor/bin/phpunit"
   }
 }

@@ -1,5 +1,7 @@
 # Lens
 
+[![Build Status](https://travis-ci.org/martinezdelariva/lens.svg?branch=master)](https://travis-ci.org/martinezdelariva/lens)
+
 Lens is an abstraction from functional programming which helps to deal with updating immutable data.
 
 ## Installation
